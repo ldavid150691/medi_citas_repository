@@ -1,0 +1,2 @@
+class WorlSchedulesController < ApplicationController
+end

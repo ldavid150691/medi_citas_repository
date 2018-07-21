@@ -1,0 +1,14 @@
+.banner
+{
+    background-color: powderblue;
+    text-align:center;
+
+}
+
+
+.site_title
+{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    line-height: 28px;
+}

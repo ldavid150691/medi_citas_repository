@@ -1,0 +1,2 @@
+module CustomerCoresHelper
+end

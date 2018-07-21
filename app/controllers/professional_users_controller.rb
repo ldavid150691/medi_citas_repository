@@ -1,0 +1,2 @@
+class ProfessionalUsersController < ApplicationController
+end

@@ -1,0 +1,50 @@
+
+ <%  if @mensaje != nil  %>
+    <script>        
+        swal("Notificacion", '<%=@mensaje%>', '<%=@tipo%>');
+    </script>
+<% end %>
+ <div class="container">
+ <div class="card card-login mx-auto mt-5">
+   <div class="card-header">Ingreso al sistema</div>
+   <div class="card-body">
+    <%=  form_tag(:controller => "customer_users", :action => "managePost", :method => "post") do |f| %><!--Codigo ruby para etiquetas html -->
+       <div class="form-group">
+         <label for="lblUser">Tipo de documento:</label>
+            <select name="sltDocomentType" id="sltDocomentType" class="form-control">
+                <%  @documentType.each do |item|  %>
+                    <option value="<%=item.VALUE %>"><%=item.DESCRIPTION %> </option>
+                <%end%>
+            </select>
+       </div>
+       <div class="form-group">
+         <label for="lblUser">Numero de documento</label>
+         <input class="form-control" id="txtDocumentNumber" name="txtDocumentNumber" type="text" aria-describedby="emailHelp" placeholder="Numero de documento">
+       </div>
+       <div class="form-group">
+         <label for="lblPassword">Contraseña</label>
+         <input class="form-control" id="txtPassword" type="password" name="txtPassword" placeholder="Contraseña">
+       </div>
+       <div class="row" style="text-align: center !important;" >
+          <div class="col-lg-12" style="text-align: right !important;">
+            <input type="submit" class="btn btn-primary btn-block" value="Ingresar" stye="width:50% !important" id="btnLogin"></input>
+         
+             <input type="submit" class="btn btn-primary btn-block" value="Recordar Contraseña" stye="width:50% !important" id="btnRescuePass"></input>
+           </div>   
+      </div> 
+      <input type="text" name="txthddAction" id="txthddAction"  value="login" hidden>
+       <% end %><!--Codigo ruby -->
+   </div>
+ </div>
+</div>
+
+<script>        
+    $('#btnRescuePass').click(function() {
+      $("#txthddAction").val("rescuePass");
+       //$('form').submit();  // submit the form
+    });
+    $('#btnLogin').click(function() {
+      $("#txthddAction").val("login");      
+      //$('form').submit();  // submit the form
+    });
+</script>

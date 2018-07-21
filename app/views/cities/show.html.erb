@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Id city:</strong>
+  <%= @city.ID_CITY %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @city.NAME %>
+</p>
+
+<p>
+  <strong>Dian code:</strong>
+  <%= @city.DIAN_CODE %>
+</p>
+
+<p>
+  <strong>Postal code:</strong>
+  <%= @city.POSTAL_CODE %>
+</p>
+
+<%= link_to 'Edit', edit_city_path(@city) %> |
+<%= link_to 'Back', cities_path %>

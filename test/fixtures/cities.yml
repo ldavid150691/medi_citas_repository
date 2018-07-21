@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ID_CITY: 1
+  NAME: MyString
+  DIAN_CODE: MyString
+  POSTAL_CODE: 1
+
+two:
+  ID_CITY: 1
+  NAME: MyString
+  DIAN_CODE: MyString
+  POSTAL_CODE: 1

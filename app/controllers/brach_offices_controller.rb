@@ -1,0 +1,2 @@
+class BrachOfficesController < ApplicationController
+end

@@ -1,0 +1,2 @@
+class DocumentTypesController < ApplicationController
+end
